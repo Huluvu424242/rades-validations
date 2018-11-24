@@ -1,4 +1,4 @@
-package com.github.funthomas424242.rades.domain;
+package com.github.funthomas424242.rades.validation.uservalidations;
 
 /*-
  * #%L

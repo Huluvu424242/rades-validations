@@ -23,6 +23,7 @@ package com.github.funthomas424242.rades.domain;
  */
 
 import com.github.funthomas424242.rades.SpringTestConfiguration;
+import com.github.funthomas424242.rades.validation.uservalidations.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

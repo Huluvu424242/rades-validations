@@ -22,8 +22,6 @@ package com.github.funthomas424242.rades.validation.uservalidations;
  * #L%
  */
 
-import com.github.funthomas424242.rades.domain.User;
-
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
