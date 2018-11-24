@@ -116,7 +116,12 @@
 			<version>2.1.0.RELEASE</version>
 			<scope>test</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>com.github.funthomas424242</groupId>
+			<artifactId>rades-annotations</artifactId>
+			<version>3.1.1</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
     <build>
@@ -219,6 +224,19 @@
                     <encoding>UTF-8</encoding>
                     <compilerArgument>-Xlint:all</compilerArgument>
                 </configuration>
+				<executions>
+					<execution>
+						<id>process-test-annotations</id>
+						<configuration>
+							<compilerArgs>
+								<arg>-proc:only</arg>
+							</compilerArgs>
+						</configuration>
+					</execution>
+					<execution>
+						<id>process-default-compiling</id>
+					</execution>
+				</executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
