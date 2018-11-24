@@ -22,10 +22,9 @@ package com.github.funthomas424242.rades.domain;
  * #L%
  */
 
-import com.github.funthomas424242.rades.validation.ValidUsername;
+import com.github.funthomas424242.rades.validation.uservalidations.ValidUsername;
 
 import javax.validation.constraints.Email;
-import javax.validation.constraints.NotNull;
 
 @ValidUsername
 public class User {

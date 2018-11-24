@@ -1,4 +1,4 @@
-package com.github.funthomas424242.rades.validation;
+package com.github.funthomas424242.rades.validation.spelclassvalidations;
 
 /*-
  * #%L
@@ -22,13 +22,28 @@ package com.github.funthomas424242.rades.validation;
  * #L%
  */
 
+
+import javax.validation.Constraint;
+import javax.validation.Payload;
 import java.lang.annotation.ElementType;
+import java.lang.annotation.Repeatable;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ValidateClassExpressions{
-	ValidateClassExpression[] value();
+@Constraint(validatedBy = {SpELClassValidator.class})
+@Repeatable(ValidateClassExpressions.class)
+public @interface ValidateClassExpression {
+
+	String message() default "{expression.validation.message}";
+
+	Class<?>[]groups() default{};
+
+	Class<? extends Payload>[] payload() default {};
+
+	String value();
+
 }
+

@@ -6,12 +6,12 @@
 
     <groupId>com.github.funthomas424242</groupId>
     <version>3.2.0-SNAPSHOT</version>
-    <artifactId>rades-annotations</artifactId>
+    <artifactId>rades-validations</artifactId>
     <packaging>jar</packaging>
-    <name>rades-annotations</name>
-    <description>Rades Annotationen zur Automatisierung</description>
+    <name>rades-validations</name>
+    <description>Rades Annotationen zur Validierung</description>
     <inceptionYear>2018</inceptionYear>
-    <url>https://github.com/FunThomas424242/rades-annotations</url>
+    <url>https://github.com/FunThomas424242/rades-validations</url>
     <licenses>
         <license>
             <url>https://www.gnu.org/licenses/lgpl-3.0.de.html</url>
@@ -28,11 +28,11 @@
     </scm>
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/FunThomas424242/rades-annotations/issues/new</url>
+        <url>https://github.com/FunThomas424242/rades-validations/issues/new</url>
     </issueManagement>
     <ciManagement>
         <system>Travis</system>
-        <url>https://travis-ci.org/FunThomas424242/rades-annotations</url>
+        <url>https://travis-ci.org/FunThomas424242/rades-validations</url>
     </ciManagement>
     <distributionManagement>
         <snapshotRepository>
@@ -77,7 +77,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-expression</artifactId>
-			<version>4.3.9.RELEASE</version>
+			<version>5.1.2.RELEASE</version>
 			<scope>compile</scope>
 		</dependency>
 

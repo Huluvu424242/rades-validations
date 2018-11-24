@@ -1,4 +1,4 @@
-package com.github.funthomas424242.rades.validation;
+package com.github.funthomas424242.rades.validation.uservalidations;
 
 /*-
  * #%L
