@@ -50,8 +50,8 @@ public class UserTest {
     }
 
     @Test
-    @DisplayName("Validiere gültige eMail")
-    public void testValideEmail(){
+    @DisplayName("Validiere User mit gültiger eMail und gültigem Login")
+    public void testValideEmailValidLogin(){
         User userValid = new User();
         userValid.setEmail("test@test.org");
         userValid.setLogin("testUser");
@@ -59,14 +59,35 @@ public class UserTest {
         Set<ConstraintViolation<User>> violations = validator.validate(userValid);
         assertEquals(0,violations.size());
 
-        final User userInvalid = new User();
-        userInvalid.setEmail("@test.com");
-        userInvalid.setLogin("tester");
-        violations=validator.validate((userInvalid));
-        assertEquals(1,violations.size());
-        assertEquals("email",violations.iterator().next().getPropertyPath().iterator().next().getName());
-
     }
+
+
+	@Test
+	@DisplayName("Validiere User mit gültiger eMail und ungültigem Login")
+	public void testValideEmailOhneLogin(){
+
+		final User userInvalid = new User();
+
+		userInvalid.setEmail("@test.com");
+		final Set<ConstraintViolation<User>> violations=validator.validate((userInvalid));
+
+		assertEquals(1,violations.size());
+		assertEquals("email",violations.iterator().next().getPropertyPath().iterator().next().getName());
+
+	}
+
+	@Test
+	@DisplayName("Validiere User ohne Login und eMail")
+	public void testValideOhneLoginUndEmail(){
+
+		final User userInvalid = new User();
+		final Set<ConstraintViolation<User>> violations=validator.validate((userInvalid));
+
+		assertEquals(1,violations.size());
+		assertEquals("{username.validation.message}",violations.iterator().next().getMessage());
+
+	}
+
 
 
 }
