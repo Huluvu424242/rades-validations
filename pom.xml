@@ -224,19 +224,6 @@
 					<encoding>UTF-8</encoding>
 					<compilerArgument>-Xlint:all</compilerArgument>
 				</configuration>
-				<!--<executions>-->
-					<!--<execution>-->
-						<!--<id>process-test-annotations</id>-->
-						<!--<configuration>-->
-							<!--<compilerArgs>-->
-								<!--<arg>-proc:only</arg>-->
-							<!--</compilerArgs>-->
-						<!--</configuration>-->
-					<!--</execution>-->
-					<!--<execution>-->
-						<!--<id>process-default-compiling</id>-->
-					<!--</execution>-->
-				<!--</executions>-->
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
