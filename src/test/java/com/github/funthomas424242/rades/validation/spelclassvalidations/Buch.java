@@ -27,8 +27,8 @@ import com.github.funthomas424242.rades.annotations.builder.RadesAddBuilder;
 import javax.validation.constraints.NotNull;
 
 @RadesAddBuilder
+@ValidateClassExpression("!(#this.isbn10 == null && #this.isbn13 == null)")
 public class Buch {
-
 	@NotNull
 	protected String titel;
 
@@ -36,5 +36,15 @@ public class Buch {
 
 	protected String isbn13;
 
+	public String getTitel() {
+		return titel;
+	}
 
+	public String getIsbn10() {
+		return isbn10;
+	}
+
+	public String getIsbn13() {
+		return isbn13;
+	}
 }
