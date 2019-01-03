@@ -34,7 +34,6 @@ public class Ausleihe {
 	@NotNull
 	Buch buch;
 
-	@NotNull
 	LocalDate von;
 
 	LocalDate bis;
