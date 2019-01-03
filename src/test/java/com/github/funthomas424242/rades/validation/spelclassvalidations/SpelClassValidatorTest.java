@@ -30,13 +30,32 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @ExtendWith(SpringExtension.class)
 public class SpelClassValidatorTest {
 
-
 	@Test
-	@DisplayName("Prüfe eine valide ClassValidation Expression")
-	public void testValidExpression(){
+	@DisplayName("Prüfe vollständig erfasstes Buch per ClassValidation Expression")
+	public void erstelleBuchAlleWerteBelegt(){
 		final Buch buch = new BuchBuilder()
 				.withTitel("Das Wort läuft")
 				.withIsbn10("test")
+				.withIsbn13("test")
+				.build();
+
+	}
+
+	@Test
+	@DisplayName("Prüfe minimal erfasstes Buch per ClassValidation Expression")
+	public void erstelleBuchWerteMinimalBelegtISBN10(){
+		final Buch buch = new BuchBuilder()
+				.withTitel("Das Wort läuft")
+				.withIsbn10("test")
+				.build();
+
+	}
+
+	@Test
+	@DisplayName("Prüfe minimal erfasstes Buch per ClassValidation Expression")
+	public void erstelleBuchWerteMinimalBelegtISBN13(){
+		final Buch buch = new BuchBuilder()
+				.withTitel("Das Wort läuft")
 				.withIsbn13("test")
 				.build();
 
