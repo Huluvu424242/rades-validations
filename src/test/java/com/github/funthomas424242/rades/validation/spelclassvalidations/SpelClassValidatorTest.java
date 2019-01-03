@@ -40,6 +40,9 @@ public class SpelClassValidatorTest {
 				.withTitel("Das Wort läuft")
 				.withIsbn10("test")
 				.withIsbn13("test")
+				// Hier wird bereits eine Validierung, daher muss der Kode im Test nicht
+				// erneut geschrieben werden - ist aber ein bisl unsauber
+				// wir Verlassen uns auf die Generierung des Builders
 				.build();
 
 	}
@@ -50,6 +53,9 @@ public class SpelClassValidatorTest {
 		final Buch buch = new BuchBuilder()
 				.withTitel("Das Wort läuft")
 				.withIsbn10("test")
+				// Hier wird bereits eine Validierung, daher muss der Kode im Test nicht
+				// erneut geschrieben werden - ist aber ein bisl unsauber
+				// wir Verlassen uns auf die Generierung des Builders
 				.build();
 
 	}
@@ -60,6 +66,9 @@ public class SpelClassValidatorTest {
 		final Buch buch = new BuchBuilder()
 				.withTitel("Das Wort läuft")
 				.withIsbn13("test")
+				// Hier wird bereits eine Validierung, daher muss der Kode im Test nicht
+				// erneut geschrieben werden - ist aber ein bisl unsauber
+				// wir Verlassen uns auf die Generierung des Builders
 				.build();
 
 	}
@@ -70,6 +79,9 @@ public class SpelClassValidatorTest {
 		Assertions.assertThrows(ValidationException.class, () -> {
 			final Buch buch = new BuchBuilder()
 					.withTitel("Das Wort läuft")
+					// Hier wird bereits eine Validierung, daher muss der Kode im Test nicht
+					// erneut geschrieben werden - ist aber ein bisl unsauber
+					// wir Verlassen uns auf die Generierung des Builders
 					.build();
 		});
 
@@ -81,6 +93,9 @@ public class SpelClassValidatorTest {
 		Assertions.assertThrows(ValidationException.class, () -> {
 			final Buch buch = new BuchBuilder()
 					.withIsbn13("test")
+					// Hier wird bereits eine Validierung, daher muss der Kode im Test nicht
+					// erneut geschrieben werden - ist aber ein bisl unsauber
+					// wir Verlassen uns auf die Generierung des Builders
 					.build();
 		});
 
