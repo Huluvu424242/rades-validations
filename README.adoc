@@ -1,0 +1,10 @@
+image:https://travis-ci.org/FunThomas424242/rades-validations.svg?branch=master["Build Status", link="https://travis-ci.org/FunThomas424242/rades-validations"]
+
+= rades-validations
+Attribut- und Parameterübergreifende Bedingungen zur Bean Validierung
+
+
+= Quellenverzeichnis
+
+* Schmeling, B. (2017). How to SpEL Validation - Klassenweite und parameterübergreifende Constraints mit der Spring Expression Language.. javamagazin, , 52-57.
+  https://www.bibsonomy.org/bibtex/23b98f16ed81bda4c84cbc63df1732e9d/funthomas424242
